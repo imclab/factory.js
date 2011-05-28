@@ -14,16 +14,15 @@ npm install coffee-script
 Open 2 terminal windows:
 
 1. Run the coffeescript watcher:
-
-~~~ bash
-coffee -w -o lib/ -c src/
-~~~
+    ~~~ bash
+    coffee -w -o lib/ -c src/
+    ~~~
 
 2. Run your tests
 
-~~~ bash
-node spec/spec_runner.js
-~~~
+    ~~~ bash
+    node spec/spec_runner.js
+    ~~~
 
 ## References
 
