@@ -51,8 +51,7 @@ Open 2 terminal windows:
     node spec/spec_runner.js
     ~~~
 
-## References
+## Todo
 
-- http://code.google.com/p/freebase-site/source/browse/trunk/www/lib/propbox/jquery.factory.js?r=5903
-- http://matchingnotes.com/factories-for-testing-javascript
-- [Github Syntax Highlighting](http://github.github.com/github-flavored-markdown/)
+- How do I get rid of the `global` reference?  How do I access global variables like `window` in node.js?
+- Demo with Backbone.js
