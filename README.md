@@ -1,5 +1,24 @@
 # Factory.js
 
+> Create fixtures to automatically fill out forms and create fake data, all from javascript.
+
+## API
+
+~~~ coffee
+# spec/factories/**/*
+Factory.define "user", ->
+  first_name:   "John"
+  last_name:    "smith"
+  email:        "local@host.com"
+
+# lib/models/**/*
+user = Factory "user"
+user = Factory "user",
+  first_name:   "some"
+  last_name:    "one"
+  email:        "some@one.com"
+~~~
+
 ## Install
 
 ~~~ bash
@@ -30,4 +49,4 @@ Open 2 terminal windows:
 
 - http://code.google.com/p/freebase-site/source/browse/trunk/www/lib/propbox/jquery.factory.js?r=5903
 - http://matchingnotes.com/factories-for-testing-javascript
-
+- [Github Syntax Highlighting](http://github.github.com/github-flavored-markdown/)
