@@ -1,5 +1,5 @@
 global.F = {};
-F.User = $.factory(M.User, {
+F.User = Factory(M.User, {
   defaults: {
     first_name: 'John',
     last_name: 'Smith',
