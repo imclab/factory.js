@@ -25,7 +25,14 @@ class global.Factory
     
     F = (args) ->
       args or= {}
-      new clazz(_.extend({}, defaults, args))
+      attrs = _.extend({}, defaults, args)
+      
+      for attr of defaults
+        if typeof(attrs[attr]) == "function"
+          attrs[attr] = attrs[attr]();
+      
+      new clazz(attrs)
+    
     F.defaults = defaults;
     Factory.definitions[name] = F
     F
