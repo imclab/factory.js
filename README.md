@@ -2,6 +2,8 @@
 
 > Create fixtures to automatically fill out forms and create fake data, all from javascript.
 
+My first attempt at javascript testing and building a javascript package.
+
 ## API
 
 ~~~ coffee
