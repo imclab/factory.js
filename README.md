@@ -24,3 +24,9 @@ coffee -w -o lib/ -c src/
 ~~~ bash
 node spec/spec_runner.js
 ~~~
+
+## References
+
+- http://code.google.com/p/freebase-site/source/browse/trunk/www/lib/propbox/jquery.factory.js?r=5903
+- http://matchingnotes.com/factories-for-testing-javascript
+
