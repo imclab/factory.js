@@ -55,3 +55,5 @@ Open 2 terminal windows:
 
 - How do I get rid of the `global` reference?  How do I access global variables like `window` in node.js?
 - Demo with Backbone.js
+
+<cite>&copy; 2011 <a href='http://viatropos.com'>@viatropos</a>. All rights reserved.</cite>
