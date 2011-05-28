@@ -13,6 +13,8 @@ Factory.define "user", ->
 
 # lib/models/**/*
 user = Factory.create "user"
+console.log(user)
+#=> {first_name: "John", last_name: "Smith", email: "john@smith.com"}
 
 # or
 user = Factory.create "user",
