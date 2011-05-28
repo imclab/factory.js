@@ -21,8 +21,6 @@ for(var key in jasmine) {
 exec("coffee --no-wrap -c spec/helpers/");
 require("../lib/factory.js");
 
-global.Factory = Factory;
-
 var models    = require("./helpers/models.js");
 var factories = require("./helpers/factories.js");
 

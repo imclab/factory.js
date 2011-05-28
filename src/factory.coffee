@@ -1,4 +1,4 @@
-Factory = (originalClass, opts) ->
+global.Factory = (originalClass, opts) ->
   defaults = _.extend({}, opts.parent?.defaults, opts.defaults)
   F = (args) -> 
     args or= {}

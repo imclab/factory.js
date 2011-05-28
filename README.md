@@ -21,7 +21,9 @@ user = Factory "user",
   email:        "some@one.com"
 ~~~
 
-## Install
+## Test
+
+### Install
 
 ~~~ bash
 brew install node -v=0.4.7 # heroku-compatible
@@ -31,7 +33,7 @@ npm install underscore
 npm install coffee-script
 ~~~
 
-## Run
+### Run
 
 Open 2 terminal windows:
 
