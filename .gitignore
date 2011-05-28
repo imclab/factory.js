@@ -1,2 +1,13 @@
 .DS_Store
 log
+src
+src/*
+src/**/*
+
+lib
+lib/*
+lib/**/*
+
+spec
+spec/*
+spec/**/*

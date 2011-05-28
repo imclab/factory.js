@@ -33,6 +33,7 @@ npm install jasmine-node
 npm install jquery
 npm install underscore
 npm install coffee-script
+sudo easy_install Pygments
 ~~~
 
 ### Run
@@ -50,6 +51,12 @@ Open 2 terminal windows:
     ~~~ bash
     node spec/spec_runner.js
     ~~~
+    
+### Documentation
+
+~~~ bash
+docco src/*.coffee
+~~~
 
 ## Todo
 
