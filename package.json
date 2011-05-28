@@ -1,0 +1,46 @@
+{
+  "name": "factory.js",
+  "version": "0.2.0",
+  "description": "A Factory Library, like Factory Girl, for Javascript",
+  "homepage": "http://viatropos.github.com/factoryjs",
+  "main": "factory.js",
+  "keywords": [
+    "factory",
+    "tdd",
+    "bdd",
+    "unit-test",
+    "node"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://mths.be/mit"
+    }
+  ],
+  "author": {
+    "name": "Lance Pollard",
+    "email": "lancejpollard@gmail.com",
+    "web": "http://viatropos.com/"
+  },
+  "maintainers": [
+    {
+      "name": "Lance Pollard",
+      "email": "lancejpollard@gmail.com",
+      "web": "http://viatropos.com/"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/viatropos/factory.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/viatropos/factory.js.git"
+  },
+  "engines": [
+    "node"
+  ],
+  "directories": {
+    "doc": "docs",
+    "test": "spec"
+  }
+}
