@@ -3,9 +3,7 @@ M.User = (function() {
   User = function(_arg) {
     this.attributes = _arg;
     this.attributes || (this.attributes = {});
-    if (!('email' in this.attributes)) {
-      throw 'All users must have an email address';
-    }
+    this.email = this.attributes.email;
     return this;
   };
   User.prototype.get = function(attr) {

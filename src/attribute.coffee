@@ -1,0 +1,2 @@
+class global.FactoryJS.Attribute
+  

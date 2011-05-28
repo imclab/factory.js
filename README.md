@@ -12,10 +12,10 @@ Factory.define "user", ->
   email:        "local@host.com"
 
 # lib/models/**/*
-user = Factory "user"
+user = new Factory "user"
 
 # or
-user = Factory "user",
+user = new Factory "user",
   first_name:   "some"
   last_name:    "one"
   email:        "some@one.com"

@@ -11,7 +11,6 @@ global.$        = global.jQuery;
 global._        = underscore;
 global.window   = jsdom().createWindow();
 global.document = global.window.document;
-global.F = {};
 global.M = {};
 
 for(var key in jasmine) {
