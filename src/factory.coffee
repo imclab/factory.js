@@ -1,8 +1,10 @@
-class global.Factory
+window or= global
+
+class Factory
   @stringToFunction: (string) ->
     array = string.split(".")
     
-    fn = (global || this)
+    fn = (window || this)
     for node in array
       fn = fn[node]
     
@@ -39,3 +41,5 @@ class global.Factory
   
   @create: (name, options) ->
     Factory.definitions[name](options)
+
+exports.Factory = Factory

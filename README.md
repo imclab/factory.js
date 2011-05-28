@@ -44,7 +44,7 @@ Open 2 terminal windows:
 1. Run the coffeescript watcher:
 
     ~~~ bash
-    coffee -w -o lib/ -c src/
+    coffee --no-wrap -w -o lib/ -c src/
     ~~~
 
 2. Run your tests

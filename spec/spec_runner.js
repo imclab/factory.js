@@ -9,8 +9,9 @@ var jsdom       = require('jsdom').jsdom,
 global.jQuery   = require("jquery");
 global.$        = global.jQuery;
 global._        = underscore;
-global.window   = jsdom().createWindow();
+global.window   = window;
 global.document = global.window.document;
+global.F = {};
 global.M = {};
 
 for(var key in jasmine) {
@@ -18,7 +19,7 @@ for(var key in jasmine) {
 }
 
 exec("coffee --no-wrap -c spec/helpers/");
-require("../lib/factory.js");
+global.Factory = require("../lib/factory.js").Factory;
 
 var models    = require("./helpers/models.js");
 var factories = require("./helpers/factories.js");
