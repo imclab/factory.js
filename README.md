@@ -9,7 +9,7 @@
 Factory.define "user", ->
   first_name:   "John"
   last_name:    "smith"
-  email:        "local@host.com"
+  email: ->     "#{first_name}@#{last_name}.com"
 
 # lib/models/**/*
 user = Factory.create "user"
