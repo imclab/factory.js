@@ -13,6 +13,8 @@ Factory.define "user", ->
 
 # lib/models/**/*
 user = Factory "user"
+
+# or
 user = Factory "user",
   first_name:   "some"
   last_name:    "one"
