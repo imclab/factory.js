@@ -4,11 +4,15 @@ var jsdom       = require('jsdom').jsdom,
     window      = jsdom().createWindow(),
     coffee      = require('coffee-script'),
     jasmine     = require('jasmine-node'),
+    underscore  = require('underscore'),
     exec        = require('child_process').exec;
 global.jQuery   = require("jquery");
 global.$        = global.jQuery;
+global._        = underscore;
 global.window   = jsdom().createWindow();
 global.document = global.window.document;
+global.F = {};
+global.M = {};
 
 for(var key in jasmine) {
   global[key] = jasmine[key];
@@ -16,7 +20,9 @@ for(var key in jasmine) {
 
 exec("coffee --no-wrap -c spec/helpers/");
 require("../lib/factory.js");
-require("./helpers/models.js");
+
+var models    = require("./helpers/models.js");
+var factories = require("./helpers/factories.js");
 
 var target = "";
 

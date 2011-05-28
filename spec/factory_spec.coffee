@@ -1,3 +1,7 @@
 describe 'Factory:', ->
+  beforeEach ->
+    @user = new F.User
+      email: "factory@js.com"
+      
   it 'should create', ->
-    expect(true).toEqual true
+    expect(@user.get("email")).toEqual("factory@js.com");

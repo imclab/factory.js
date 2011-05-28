@@ -6,6 +6,7 @@
 brew install node -v=0.4.7 # heroku-compatible
 npm install jasmine-node
 npm install jquery
+npm install underscore
 npm install coffee-script
 ~~~
 
