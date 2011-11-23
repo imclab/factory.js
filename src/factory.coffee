@@ -1,45 +1,51 @@
-window or= global
-
-class Factory
-  @stringToFunction: (string) ->
-    array = string.split(".")
-    
-    fn = (window || this)
-    for node in array
-      fn = fn[node]
-    
-    throw new Error("function not found") if typeof(fn) != "function"
-    
-    fn
-  
+class Factory  
   @definitions: {}
   
-  @define: (name, options, attributes) ->
-    options     or= {}
-    attributes  or= {}
-    
-    class_name        = if options.class_name? then options.class_name else name
-    parent_class_name = if options.parent? then parent else null
-    defaults          = _.extend({}, options.parent?.defaults, {});
-    defaults          = _.extend({}, defaults, attributes);
-    
-    clazz             = Factory.stringToFunction(class_name)
-    
-    F = (args) ->
-      args or= {}
-      attrs = _.extend({}, defaults, args)
-      
-      for attr of defaults
-        if typeof(attrs[attr]) == "function"
-          attrs[attr] = attrs[attr]();
-      
-      new clazz(attrs)
-    
-    F.defaults = defaults;
-    Factory.definitions[name] = F
-    F
+  @define: (name, options, callback) ->
+    @definitions[name] = new Factory(name, options, callback)
   
   @create: (name, options) ->
-    Factory.definitions[name](options)
+    factory = Factory.definitions[name]
+    throw new Error("Factory '#{name}' doesn't exist.") unless factory
+    factory.create(options)
+    
+  constructor: (name, options = {}, callback) ->
+    return Factory.create(name, options) unless @constructor == Factory
+    
+    if typeof(options) == "function"
+      callback  = options
+      options   = {}
+    
+    throw new Error("Expected function callback for Factory '#{name}'") unless typeof(callback) == "function"
+    
+    @name             = name
+    @className        = _.camelize("_" + (options.className || name))
+    @parentClassName  = options.parent
+    @callback         = callback
+    
+  toClass: ->
+    parts = @className.split(".")
+    fn    = if typeof(window) != "undefined" then window else (exports || this)
+    fn    = fn[node] for node in parts
+    
+    throw new Error("Class #{string} not found") if typeof(fn) != "function"
+    
+    fn
+    
+  create: (overrides = {}) ->
+    attributes      = {}
+    defaults        = @callback.call(@) || {}
+    
+    attributes[key] = value for key, value of defaults
+    attributes[key] = value for key, value of overrides
+    
+    klass           = @toClass()
+    
+    new klass(attributes)
 
-exports.Factory = Factory
+if typeof(exports) != "undefined" && typeof(module) != "undefined"
+  module.exports = Factory
+else if typeof(window) != "undefined"
+  window.Factory = Factory
+else
+  this.Factory = Factory

@@ -25,37 +25,14 @@ user = Factory.create "user",
   email:        "some@one.com"
 ~~~
 
-## Test
+## License
 
-### Install
+(The MIT License)
 
-~~~ bash
-brew install node -v=0.4.7 # heroku-compatible
-npm install jasmine-node
-npm install jquery
-npm install underscore
-npm install coffee-script
-~~~
+Copyright &copy; 2011 [Lance Pollard](http://twitter.com/viatropos) &lt;lancejpollard@gmail.com&gt;
 
-### Run
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-Open 2 terminal windows:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-1. Run the coffeescript watcher:
-
-    ~~~ bash
-    coffee --no-wrap -w -o lib/ -c src/
-    ~~~
-
-2. Run your tests
-
-    ~~~ bash
-    node spec/spec_runner.js
-    ~~~
-
-## Todo
-
-- How do I get rid of the `global` reference?  How do I access global variables like `window` in node.js?
-- Demo with Backbone.js
-
-<cite>&copy; 2011 <a href='http://viatropos.com'>@viatropos</a>. All rights reserved.</cite>
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
